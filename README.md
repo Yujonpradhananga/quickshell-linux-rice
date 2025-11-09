@@ -29,7 +29,6 @@ cp -r quickshell-linux-rice/* ~/.config/quickshell/
 ## Dependencies
 
 - quickshell
-- [Add any other dependencies here]
 
 ## Credits
 
