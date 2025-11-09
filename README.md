@@ -1,7 +1,4 @@
 # Quickshell Linux Rice
-
-My Quickshell configuration for Void Linux.
-
 ## Screenshots
 
 ![Rice 1](screenshots/rice1.png)
