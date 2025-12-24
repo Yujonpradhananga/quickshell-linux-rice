@@ -6,6 +6,11 @@
 ![Rice 3](screenshots/rice3.png)
 ![Rice 4](screenshots/rice4.png)
 ![Rice 5](screenshots/rice5.png)
+![Rice 1](screenshots/r1.png)
+![Rice 2](screenshots/r2.png)
+![Rice 3](screenshots/r3.png)
+![Rice 4](screenshots/r4.png)
+![Rice 5](screenshots/r5.png)
 
 ## Details
 

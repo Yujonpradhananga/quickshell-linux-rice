@@ -9,42 +9,29 @@ QtObject {
   property int memPercentage: 0
   property string icon: "󰍛"
   
-  property Timer updateTimer: Timer {
-    interval: 5000  // 5 seconds is good for RAM
+  property var updateTimer: Timer {
+    interval: 5000
     running: true
     repeat: true
     triggeredOnStart: true
-    onTriggered: {
-      meminfoFile.reload()
-    }
+    onTriggered: meminfoFile.reload()
   }
   
-  property FileView meminfoFile: FileView {
+  property var meminfoFile: FileView {
     path: "/proc/meminfo"
+    
     onLoaded: {
-      var data = text()
+      const data = text()
       
-      // Parse MemTotal
-      var totalMatch = data.match(/MemTotal:\s+(\d+)/)
-      if (totalMatch) {
+      const totalMatch = data.match(/MemTotal:\s+(\d+)/)
+      const availMatch = data.match(/MemAvailable:\s+(\d+)/)
+      
+      if (totalMatch && availMatch) {
         root.memTotal = parseInt(totalMatch[1])
-      }
-      
-      // Parse MemAvailable
-      var availMatch = data.match(/MemAvailable:\s+(\d+)/)
-      if (availMatch) {
-        var memAvailable = parseInt(availMatch[1])
+        const memAvailable = parseInt(availMatch[1])
         root.memUsed = root.memTotal - memAvailable
+        root.memPercentage = Math.round((root.memUsed / root.memTotal) * 100)
       }
-      
-      root.updatePercentage()
-    }
-  }
-  
-  function updatePercentage() {
-    if (root.memTotal > 0) {
-      root.memPercentage = Math.round((root.memUsed / root.memTotal) * 100)
-      root.updateIcon()
     }
   }
 }
