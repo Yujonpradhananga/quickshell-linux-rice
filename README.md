@@ -16,6 +16,7 @@
 
 - **OS**: Void Linux
 - **Shell**: Quickshell
+- WM: Hyprland and MangoWC (supports MangoWC tags also)
 
 ## Installation
 
@@ -30,6 +31,15 @@ cp -r quickshell-linux-rice/* ~/.config/quickshell/
 ```
 
 3. Restart Quickshell or reload the configuration.
+
+4. if you use hyprland replace the Mango call in the shell.qml file:
+
+import Quickshell
+
+Scope {
+  Rice{}
+  HyprlandWorkspace{}
+}
 
 ## Dependencies
 
