@@ -16,7 +16,7 @@
 
 - **OS**: Void Linux
 - **Shell**: Quickshell
-- WM: Hyprland and MangoWC (supports MangoWC tags also)
+- **WM**: Hyprland and MangoWC (supports MangoWC tags also)
 
 ## Installation
 
