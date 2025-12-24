@@ -29,8 +29,8 @@ ShellRoot {
       
       Rectangle {
         anchors.fill: parent
-        color: "lightgrey"
-        border.color: "lightgrey"
+        color:"grey"
+        border.color: "grey"
         radius: 8
         
         Text {

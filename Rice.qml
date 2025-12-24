@@ -30,7 +30,7 @@ ShellRoot{
       {
         right: 5
         left: 5
-        top: 53
+        top: 120
         bottom: 5
       }
 
@@ -75,11 +75,11 @@ ShellRoot{
             right: parent.right
             rightMargin: 10
             top: parent.top
-            topMargin: 203
+            topMargin: 200
           }
           Text{
-            text: '"I hope peace"'
-            color:"lightgreen"
+            text: '"i hope peace"'
+            color:"#5b239a"
             font.family: "Glirock"
             font.pixelSize:90
           }
@@ -140,19 +140,19 @@ ShellRoot{
           }
 
           Rectangle{
-            width: 160
-            height: 50
-            color: "lightblue"
-            border.color: "lightblue"
-            radius: 5
+            width: 145
+            height: 40
+            color:"#865546"
+            radius: 9
 
             Text {
                 anchors.fill: parent
+                font.pixelSize: 60
                 text: clock.date.toLocaleString(Qt.locale("en_US"), "hh:mm ap")
                 color: "black"
                 font.family: "Montserrat Light"
                 font.weight: Font.Black
-                font.pointSize: 500
+                font.pointSize: 1200
                 fontSizeMode: Text.Fit
                 layer.enabled: true
             }
