@@ -18,7 +18,15 @@
 - **Shell**: Quickshell
 - **WM**: Hyprland and MangoWC (supports MangoWC tags also)
 
-## Installation
+## Note:
+
+# if you use Mango replace the Hyprland call in the shell.qml file:
+
+## Installation:
+
+1. Download the  bin form the releases section
+
+## Building from source
 
 1. Clone this repository:
 ```bash
@@ -31,8 +39,6 @@ cp -r quickshell-linux-rice/* ~/.config/quickshell/
 ```
 
 3. Restart Quickshell or reload the configuration.
-
-4. if you use hyprland replace the Mango call in the shell.qml file:
 
 import Quickshell
 
